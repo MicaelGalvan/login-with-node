@@ -27,6 +27,10 @@ const UserSchema = Schema({
     hiddenStaffNotes: {
         type: String,
     },
+    projectKey: {
+        type: String,
+        required: true
+    },
 },
     {
         timestamps: true,
