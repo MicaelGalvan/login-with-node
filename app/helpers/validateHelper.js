@@ -8,8 +8,7 @@ const validateResult = (req, res, next) => {
     } catch (err) {
         console.log(err);
         //TODO: CREATE A CUSTOM HUNDLE ERROR FOR THIS CATCH SECTION
-        res.status(403)
-        res.send({ errors: err.array() })
+        res.status(403).send({ errors: err.array() })
     }
 }
 

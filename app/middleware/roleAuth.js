@@ -11,14 +11,12 @@ const checkRoleAuth = (roles) => async (req, res, next) => {
         if ([].concat(roles).includes(userData.role)) { //TODO:
             next()
         } else {
-            res.status(409)
-            res.send({ error: 'No tienes permisos' })
+            res.status(409).send({ error: 'No tienes permisos' })
         }
 
     } catch (e) {
         console.log(e)
-        res.status(409)
-        res.send({ error: 'Tu por aqui no pasas!' })
+        res.status(409).send({ error: 'Tu por aqui no pasas!' })
     }
 
 }

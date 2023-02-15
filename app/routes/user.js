@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { list, get, remove, create, update } = require('../controllers/estate');
+const { list, get, remove, create, update } = require('../controllers/user');
 const { validateCreate } = require('../validators/user');
 
 router.get('/all', list);
