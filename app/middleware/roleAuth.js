@@ -16,7 +16,7 @@ const checkRoleAuth = (roles) => async (req, res, next) => {
 
     } catch (e) {
         console.log(e)
-        res.status(409).send({ error: 'Tu por aqui no pasas!' })
+        res.status(409).send({ error: 'No tienes permisos 2' })
     }
 
 }

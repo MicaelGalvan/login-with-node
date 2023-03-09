@@ -7,13 +7,11 @@ const checkAuth = async (req, res, next) => {
         if (tokenData._id) {
             next()
         } else {
-            res.status(409)
-            res.send({ error: 'Error' })
+            res.status(409).send({ error: 'Error' })
         }
 
     } catch (e) {
-        res.status(409)
-        res.send({ error: 'Error' })
+        res.status(409).send({ error: 'Error' })
     }
 
 }

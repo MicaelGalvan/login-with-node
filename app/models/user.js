@@ -27,10 +27,6 @@ const UserSchema = Schema({
     hiddenStaffNotes: {
         type: String,
     },
-    projectKey: {
-        type: String,
-        required: true
-    },
 },
     {
         timestamps: true,
@@ -38,9 +34,9 @@ const UserSchema = Schema({
     }
 );
 
-UserSchema.methods.toJSON = function () {
-    const { password, _id, ...userData } = this.toObject();
-    return userData;
-};
+// UserSchema.methods.toJSON = function () {
+//     const { password, _id, ...userData } = this.toObject();
+//     return userData;
+// };
 
 module.exports = mongoose.model('user', UserSchema)

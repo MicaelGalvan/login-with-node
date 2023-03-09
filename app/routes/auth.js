@@ -7,5 +7,4 @@ router.post('/login', loginCtrl)
 
 router.post('/register', registerCtrl)
 
-
 module.exports = router

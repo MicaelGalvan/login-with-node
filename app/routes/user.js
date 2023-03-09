@@ -6,7 +6,7 @@ const { validateCreate } = require('../validators/user');
 router.get('/all', list);
 router.get('/:id', get);
 router.post('/', validateCreate, create);
-router.patch('/:id', update);
+router.put('/:id', update);
 router.delete('/:id', remove);
 
 module.exports = router;
